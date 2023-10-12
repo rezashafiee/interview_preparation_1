@@ -10,7 +10,7 @@ pipeline {
   stages {
 
     // Put your stages here
-    stage('Detect build type') {
+    /* stage('Detect build type') {
       steps {
         script {
           if (env.BRANCH_NAME == 'develop' || env.CHANGE_TARGET == 'develop') {
@@ -34,6 +34,14 @@ pipeline {
         // Compile the app and its dependencies
         sh './gradlew assemble${BUILD_TYPE}'
         sh './gradlew generatePomFileForLibraryPublication'
+      }
+    } */
+
+    stage('Run unit tests') {
+      steps {
+        script {
+          sh 'bundle exec fastlane test'
+        }
       }
     }
   }
