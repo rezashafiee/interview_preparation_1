@@ -40,7 +40,7 @@ pipeline {
     stage('init') {
         steps {
             script {
-              sh 'sudo bundle install'
+              sh 'bundle install'
             }
           }
     }
