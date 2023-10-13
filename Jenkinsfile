@@ -37,6 +37,14 @@ pipeline {
       }
     } */
 
+    stage('init') {
+        steps {
+            script {
+              sh 'bundle install'
+            }
+          }
+    }
+
     stage('Run unit tests') {
       steps {
         script {
