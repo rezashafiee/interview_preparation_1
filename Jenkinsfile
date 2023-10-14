@@ -41,6 +41,7 @@ pipeline {
         steps {
             script {
               sh 'gem install bundler --user'
+              sh 'bundle install'
             }
           }
     }
