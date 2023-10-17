@@ -40,8 +40,7 @@ pipeline {
     stage('init') {
         steps {
             script {
-              sh 'gem install bundler --user-install'
-              sh 'bundle install'
+              sh 'bundle update'
             }
           }
     }
