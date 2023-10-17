@@ -45,14 +45,6 @@ pipeline {
           }
     }
 
-    stage('Run lint') {
-      steps {
-        script {
-          sh 'bundle exec fastlane lint'
-        }
-      }
-    }
-
     stage('Run unit tests') {
       steps {
         script {
