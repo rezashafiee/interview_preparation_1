@@ -37,6 +37,15 @@ pipeline {
       }
     } */
 
+    stage('init') {
+        steps {
+            script {
+              sh 'gem install bundler --user-install'
+              sh 'bundle install'
+            }
+          }
+    }
+
     stage('Run unit tests') {
       steps {
         script {
