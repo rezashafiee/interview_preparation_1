@@ -1,9 +1,6 @@
 pipeline {
   agent {
-    node {
-        label 'master'
-        customWorkspace '/home/ubuntu/Jenkins/Workspace'
-    }
+    customWorkspace '/home/ubuntu/Jenkins/Workspace'
   }
   environment {
     ANDROID_HOME = '/home/ubuntu/Android/sdk'
