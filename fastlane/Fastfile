@@ -22,8 +22,8 @@ platform :android do
   end
 
   desc "Runs unit tests"
-  lane :unit_test do
-    gradle(task: "testDebugUnitTest")
+  lane :test do
+    gradle(task: "test")
   end
 
   desc "Submit a new Beta Build to Crashlytics Beta"

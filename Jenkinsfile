@@ -46,10 +46,10 @@ pipeline {
           }
     }
 
-    stage('Run unit tests') {
+    stage('Run tests') {
       steps {
         script {
-          sh 'bundle exec fastlane unit_test'
+          sh 'bundle exec fastlane test'
         }
       }
     }
