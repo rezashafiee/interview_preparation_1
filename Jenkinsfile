@@ -1,7 +1,7 @@
 pipeline {
   agent {
     node {
-        label 'Main'
+        label 'Master'
         customWorkspace '/home/ubuntu/Jenkins/Workspace'
     }
   }
