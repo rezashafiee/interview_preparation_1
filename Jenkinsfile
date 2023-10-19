@@ -1,5 +1,10 @@
 pipeline {
-  agent any
+  agent {
+    node {
+        label 'Main'
+        customWorkspace '/home/ubuntu/Jenkins/Workspace'
+    }
+  }
   environment {
     ANDROID_HOME = '/home/ubuntu/Android/sdk'
     PATH = "${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools:$PATH"
